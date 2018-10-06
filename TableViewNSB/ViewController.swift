@@ -34,6 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.register(BandCell.self, forCellReuseIdentifier: bandCellId)
         view.addSubview(tableView)
         tableView.setAnchor(top: view.topAnchor, topPad: 0, bottom: view.bottomAnchor, bottomPad: 0, left: view.leftAnchor, leftPad: 0, right: view.rightAnchor, rightPad: 0, height: 0, width: 0)
     }
