@@ -11,6 +11,8 @@
 		E9E5583F21695F14001B21E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5583E21695F14001B21E2 /* ViewController.swift */; };
 		E9E5584421695F15001B21E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9E5584321695F15001B21E2 /* Assets.xcassets */; };
 		E9E5584721695F15001B21E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E5584521695F15001B21E2 /* LaunchScreen.storyboard */; };
+		E9E55850216960BE001B21E2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5584F216960BE001B21E2 /* UIView+Extension.swift */; };
+		E9E5585221696128001B21E2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5585121696128001B21E2 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		E9E5584321695F15001B21E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9E5584621695F15001B21E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9E5584821695F15001B21E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9E5584F216960BE001B21E2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E9E5585121696128001B21E2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		E9E5583B21695F14001B21E2 /* TableViewNSB */ = {
 			isa = PBXGroup;
 			children = (
+				E9E5584E2169604B001B21E2 /* Extensions */,
 				E9E5583C21695F14001B21E2 /* AppDelegate.swift */,
 				E9E5583E21695F14001B21E2 /* ViewController.swift */,
 				E9E5584321695F15001B21E2 /* Assets.xcassets */,
@@ -59,6 +64,15 @@
 				E9E5584821695F15001B21E2 /* Info.plist */,
 			);
 			path = TableViewNSB;
+			sourceTree = "<group>";
+		};
+		E9E5584E2169604B001B21E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9E5584F216960BE001B21E2 /* UIView+Extension.swift */,
+				E9E5585121696128001B21E2 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E55850216960BE001B21E2 /* UIView+Extension.swift in Sources */,
 				E9E5583F21695F14001B21E2 /* ViewController.swift in Sources */,
 				E9E5583D21695F14001B21E2 /* AppDelegate.swift in Sources */,
+				E9E5585221696128001B21E2 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
