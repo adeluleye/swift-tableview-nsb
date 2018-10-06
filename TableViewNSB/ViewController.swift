@@ -12,6 +12,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.title = "TableViewNSB"
+        navigationController?.navigationBar.barTintColor = UIColor(r: 0, g: 255, b: 198)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
     }
 }
