@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        return tableView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -19,6 +26,5 @@ class ViewController: UIViewController {
         navigationItem.title = "TableViewNSB"
         navigationController?.navigationBar.barTintColor = UIColor(r: 0, g: 255, b: 198)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
-        
     }
 }
