@@ -20,11 +20,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupTableView()
     }
     
     func setupNavigationBar() {
         navigationItem.title = "TableViewNSB"
         navigationController?.navigationBar.barTintColor = UIColor(r: 0, g: 255, b: 198)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
+    }
+    
+    func setupTableView() {
+        view.addSubview(tableView)
+        tableView.setAnchor(top: view.topAnchor, topPad: 0, bottom: view.bottomAnchor, bottomPad: 0, left: view.leftAnchor, leftPad: 0, right: view.rightAnchor, rightPad: 0, height: 0, width: 0)
     }
 }
