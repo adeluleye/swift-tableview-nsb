@@ -65,6 +65,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: bandCellId, for: indexPath) as! BandCell
+        cell.pictureImageView.image = UIImage(named: bandsArray[indexPath.item].image!)
+        cell.titleLabel.text = bandsArray[indexPath.item].title
+        
+        if indexPath.section == 1 {
+            cell.pictureImageView.image = UIImage(named: songsArray[indexPath.item].image!)
+            cell.titleLabel.text = songsArray[indexPath.item].title
+        }
         return cell
     }
     
