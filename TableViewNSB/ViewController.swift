@@ -78,7 +78,6 @@ class BandCell: UITableViewCell {
         let image = UIImage(named: "")
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .red
         return imageView
     }()
     
