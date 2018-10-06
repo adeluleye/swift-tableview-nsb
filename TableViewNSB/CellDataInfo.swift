@@ -1,5 +1,5 @@
 //
-//  info.swift
+//  CellDataInfo.swift
 //  TableViewNSB
 //
 //  Created by ADELU ABIDEEN ADELEYE on 10/7/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct info {
+struct CellDataInfo {
     var image: String?
     var title: String?
 }

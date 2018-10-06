@@ -19,6 +19,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let bandCellId = "bandCellId"
     
+    let bandsArray = [CellDataInfo(image: "metallica", title: "Metallica"),
+                      CellDataInfo(image: "slipknot", title: "Slipknot"),
+                      CellDataInfo(image: "nirvana", title: "Nirvana"),
+                      CellDataInfo(image: "acdc", title: "AC/DC"),
+                      CellDataInfo(image: "system", title: "System of down")]
+    
+    let songsArray = [CellDataInfo(image: "1", title: "The Unforgiven"),
+                      CellDataInfo(image: "2", title: "Snuff"),
+                      CellDataInfo(image: "3", title: "Smells Like Teen Spirit"),
+                      CellDataInfo(image: "4", title: "Back In Black"),
+                      CellDataInfo(image: "5", title: "Chop Suey")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -45,7 +57,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if section == 1 {
+            return songsArray.count
+        }
+        return bandsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
