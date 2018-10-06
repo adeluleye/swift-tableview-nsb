@@ -67,6 +67,13 @@ class BandCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        setup()
+    }
+    
+    func setup() {
+        addSubview(cellView)
+        cellView.setAnchor(top: topAnchor, topPad: 4, bottom: bottomAnchor, bottomPad: 4, left: leftAnchor, leftPad: 8, right: rightAnchor, rightPad: 8, height: 0, width: 0)
     }
     
     required init?(coder aDecoder: NSCoder) {
