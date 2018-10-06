@@ -74,6 +74,21 @@ class BandCell: UITableViewCell {
         return view
     }()
     
+    let pictureImageView: UIImageView = {
+        let image = UIImage(named: "")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.text = "Name"
+        label.textColor = .darkGray
+        return label
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
