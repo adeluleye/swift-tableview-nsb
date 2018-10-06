@@ -107,7 +107,7 @@ class BandCell: UITableViewCell {
         pictureImageView.setAnchor(top: nil, topPad: 0, bottom: nil, bottomPad: 0, left: cellView.leftAnchor, leftPad: 8, right: nil, rightPad: 0, height: 40, width: 40)
         pictureImageView.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
         
-        titleLabel.setAnchor(top: nil, topPad: 0, bottom: nil, bottomPad: 0, left: pictureImageView.leftAnchor, leftPad: 20, right: rightAnchor, rightPad: 20, height: 40, width: 0)
+        titleLabel.setAnchor(top: nil, topPad: 0, bottom: nil, bottomPad: 0, left: pictureImageView.rightAnchor, leftPad: 20, right: rightAnchor, rightPad: 20, height: 40, width: 0)
         titleLabel.centerYAnchor.constraint(equalTo: pictureImageView.centerYAnchor).isActive = true
     }
     
