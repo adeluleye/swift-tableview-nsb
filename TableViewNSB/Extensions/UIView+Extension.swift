@@ -20,35 +20,36 @@ extension UIView {
         self.layer.cornerRadius = 4
     }
     
-    func setAnchor(top: NSLayoutYAxisAnchor?, left: NSLayoutXAxisAnchor?,
-                   bottom: NSLayoutYAxisAnchor?, right: NSLayoutXAxisAnchor?,
-                   paddingTop: CGFloat, paddingLeft: CGFloat, paddingBottom: CGFloat,
-                   paddingRight: CGFloat, width: CGFloat = 0, height: CGFloat = 0) {
+    func setAnchor(width: CGFloat, height: CGFloat) {
+        self.setAnchor(top: nil, topPad: 0, bottom: nil, bottomPad: 0, left: nil, leftPad: 0, right: nil, rightPad: 0, height: height, width: width)
+    }
+    
+    func setAnchor(top: NSLayoutYAxisAnchor?, topPad: CGFloat, bottom: NSLayoutYAxisAnchor?, bottomPad: CGFloat, left: NSLayoutXAxisAnchor?, leftPad: CGFloat, right: NSLayoutXAxisAnchor?, rightPad: CGFloat, height: CGFloat, width: CGFloat) {
         
         self.translatesAutoresizingMaskIntoConstraints = false
         
         if let top = top {
-            self.topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
-        }
-        
-        if let left = left {
-            self.leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
+            self.topAnchor.constraint(equalTo: top, constant: topPad).isActive = true
         }
         
         if let bottom = bottom {
-            self.bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
+            self.bottomAnchor.constraint(equalTo: bottom, constant: -bottomPad).isActive = true
+        }
+        
+        if let left = left {
+            self.leftAnchor.constraint(equalTo: left, constant: leftPad).isActive = true
         }
         
         if let right = right {
-            self.rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
+            self.rightAnchor.constraint(equalTo: right, constant: -rightPad).isActive = true
         }
         
-        if width != 0 {
-            self.widthAnchor.constraint(equalToConstant: width).isActive = true
-        }
-        
-        if height != 0 {
+        if height > 0 {
             self.heightAnchor.constraint(equalToConstant: height).isActive = true
+        }
+        
+        if width > 0 {
+            self.widthAnchor.constraint(equalToConstant: width).isActive = true
         }
     }
     
