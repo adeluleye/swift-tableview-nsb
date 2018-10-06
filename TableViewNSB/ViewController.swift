@@ -78,6 +78,7 @@ class BandCell: UITableViewCell {
         let image = UIImage(named: "")
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .red
         return imageView
     }()
     
@@ -96,8 +97,18 @@ class BandCell: UITableViewCell {
     }
     
     func setup() {
+        backgroundColor = UIColor(r: 245, g: 245, b: 245)
+        
         addSubview(cellView)
+        cellView.addSubview(pictureImageView)
+        cellView.addSubview(titleLabel)
+        
         cellView.setAnchor(top: topAnchor, topPad: 4, bottom: bottomAnchor, bottomPad: 4, left: leftAnchor, leftPad: 8, right: rightAnchor, rightPad: 8, height: 0, width: 0)
+        pictureImageView.setAnchor(top: nil, topPad: 0, bottom: nil, bottomPad: 0, left: cellView.leftAnchor, leftPad: 8, right: nil, rightPad: 0, height: 40, width: 40)
+        pictureImageView.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
+        
+        titleLabel.setAnchor(top: nil, topPad: 0, bottom: nil, bottomPad: 0, left: pictureImageView.leftAnchor, leftPad: 20, right: rightAnchor, rightPad: 20, height: 40, width: 0)
+        titleLabel.centerYAnchor.constraint(equalTo: pictureImageView.centerYAnchor).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
